@@ -6,6 +6,11 @@ class AppTheme {
       useMaterial3: true,
       splashFactory: NoSplash.splashFactory,
       colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFc7f46e)),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
+      ),
     );
   }
 }

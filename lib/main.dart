@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:podtimer/config/router/app_router.dart';
-import 'package:podtimer/theme/app_theme.dart';
+import 'package:podtimer/config/theme/app_theme.dart';
+import 'package:podtimer/data/datasource.dart';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: '.env');
+  Datasource().getAccessToken();
   runApp(
     const MainApp(),
   );
@@ -13,7 +17,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // no need to add home: because go_router knows the initial location
     return MaterialApp.router(
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,

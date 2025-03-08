@@ -23,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(
-        // keeps state
         index: widget.index,
         children: routes,
       ),
