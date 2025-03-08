@@ -2,8 +2,18 @@ import 'package:go_router/go_router.dart';
 import 'package:podtimer/presentation/screens/screens.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/home/0',
+  initialLocation: '/splash',
   routes: [
+    GoRoute(
+      path: "/splash",
+      name: SplashScreen.name,
+      builder: (_, __) => const SplashScreen(),
+    ),
+    GoRoute(
+      path: "/login",
+      name: LoginScreen.name,
+      builder: (_, __) => const LoginScreen(),
+    ),
     GoRoute(
       path: "/home/:page",
       name: HomeScreen.name,
